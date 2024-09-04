@@ -31,3 +31,18 @@ jobs:
         password-secret: ${{ secrets.password }}
         solution-name: ALMTest
         solution-output-file: out/exported/ALMLab.zip
+
+    - name: unpack-solution action
+      uses: microsoft/powerplatform-actions/unpack-solution@v0
+      with:
+        solution-file: out/exported/ALMLab.zip
+        solution-folder: out/solutions/ALMLab
+        solution-type: 'Unmanaged'
+        overwrite-files: true
+    - name: branch-solution, prepare it for a PullRequest
+      uses: microsoft/powerplatform-actions/branch-solution@v0
+      with:
+        solution-folder: out/solutions/ALMLab
+        solution-target-folder: solutions/ALMLab
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        allow-empty-commit: true
