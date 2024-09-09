@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        run: echo "Hello World!-Push"
   my-job2:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World Again!"
+        run: echo "Hello World - Pull Request!"
