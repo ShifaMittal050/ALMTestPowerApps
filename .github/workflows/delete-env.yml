@@ -6,7 +6,7 @@ on:
         dev_env: 
           description: 'url for the dev environment'
           type: string
-          default: https://[hostname]Dev.crm.dynamics.com
+          default: https://orgfc38be7b.crm8.dynamics.com
 
 jobs:
   Delete-Environments:
