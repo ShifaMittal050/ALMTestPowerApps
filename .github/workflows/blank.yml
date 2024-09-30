@@ -1,0 +1,9 @@
+name: powerplatform-actions
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: powerplatform-actions
+        uses: microsoft/powerplatform-actions@v1.7.0
+            
