@@ -20,7 +20,7 @@
     <LocalizedName description="Time Off Requests" languagecode="1033" />
   </LocalizedNames>
   <Descriptions>
-    <Description description="Streamline the process of managing employee leave with Time Off Requests, an app currently in initial development. Empower your HR team to efficiently handle time off requests and approvals." languagecode="1033" />
+    <Description description="Streamline the process of managing employees leave with Time Off Requests, an app currently in initial development. Empower your HR team to efficiently handle time off requests and approvals." languagecode="1033" />
   </Descriptions>
   <appsettings>
     <appsetting settingdefinitionid.uniquename="AppChannel">
