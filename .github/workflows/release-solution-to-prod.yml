@@ -26,7 +26,7 @@ jobs:
         solution-file: out/solutions/ALMLab.zip
         solution-type: Unmanaged
 
-    - name: Import solution as unmanaged to build env
+    - name: Import solution as unmanaged to test env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: 'https://crmtest1.crm8.dynamics.com'
@@ -46,7 +46,7 @@ jobs:
         managed: true
         solution-output-file: out/ship/ALMLab.zip
 
-    - name: Upload the ready to ship solution to GH artifact store
+    - name: Upload the solution to GH artifact store
       uses: actions/upload-artifact@v4
       with:
         name: managedSolutions
@@ -63,7 +63,7 @@ jobs:
       with:
         lfs: true
 
-    - name: Fetch the ready to ship solution from GH artifact store
+    - name: Fetch the solution from GH artifact store
       uses: actions/download-artifact@v2
       with:
         name: managedSolutions
