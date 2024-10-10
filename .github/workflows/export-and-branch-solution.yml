@@ -18,15 +18,21 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
         environment-url: 'https://orgfc38be7b.crm8.dynamics.com/'
-        user-name: 'ShifaMittal@acc0555.onmicrosoft.com'
-        password-secret: ${{ secrets.password }}
+        # user-name: 'ShifaMittal@acc0555.onmicrosoft.com'
+        # password-secret: ${{ secrets.password }}
+        app-id: ${{secrets.CLIENT_ID}}
+        client-secret: ${{secrets.PowerPlatformSPN}}
+        tenant-id: ${{secrets.TENANT_ID}}
         
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://orgfc38be7b.crm8.dynamics.com/'
-        user-name: 'ShifaMittal@acc0555.onmicrosoft.com'
-        password-secret: ${{ secrets.password }}
+        # user-name: 'ShifaMittal@acc0555.onmicrosoft.com'
+        # password-secret: ${{ secrets.password }}
+        app-id: ${{secrets.CLIENT_ID}}
+        client-secret: ${{secrets.PowerPlatformSPN}}
+        tenant-id: ${{secrets.TENANT_ID}}
         solution-name: ALMTest
         solution-output-file: out/exported/ALMLab.zip
 
